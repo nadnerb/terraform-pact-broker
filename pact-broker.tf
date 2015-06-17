@@ -99,6 +99,7 @@ resource "aws_instance" "server" {
 
   provisioner "remote-exec" {
     scripts = [
+      "${path.module}/scripts/install.sh",
       "${template_file.server.filename}",
       "${path.module}/scripts/service.sh",
     ]

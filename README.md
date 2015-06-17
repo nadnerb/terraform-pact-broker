@@ -3,9 +3,7 @@ Pact broker on AWS using terraform
 
 ## Setup
 
-This uses a prebuild ami done with packer found [here](https://github.com/nadnerb/packer-pact-broker):
-
-You also need to have a postgres instance available (e.g Amazon RDS).
+You need to have a postgres instance available (e.g Amazon RDS).
 
 ## Configuration
 
@@ -17,7 +15,7 @@ aws_secret_key="some secret"
 key_name="pem name"
 key_path="~/.ssh/pem.location"
 aws_region="ap-southeast-2"
-aws_ami="built using above ^^"
+aws_ami="ubuntu ami for your region"
 
 # db stuff
 db_username="username"
@@ -33,3 +31,7 @@ db_name="database"
 ## Apply
 
 `terraform apply -var-file pact.tfvars`
+
+## TODO
+
+* Modify Terraform so that it can provision templated files
