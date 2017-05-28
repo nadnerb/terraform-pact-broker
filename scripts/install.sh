@@ -18,7 +18,7 @@ sudo apt-get install -y nginx apache2-utils
 sudo gem install bundler --no-rdoc --no-ri
 
 echo "Installing pact broker"
-git clone https://github.com/bethesque/pact_broker
+git clone https://github.com/pact-foundation/pact_broker
 sudo cp -r pact_broker/example /usr/local/pact_broker
 
 sudo adduser pact --disabled-password --system
